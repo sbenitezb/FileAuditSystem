@@ -11,6 +11,10 @@
 		B70F0D9829357CB200F47155 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70F0D9729357CB200F47155 /* ViewController.swift */; };
 		B70F0D9A29357CB700F47155 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B70F0D9929357CB700F47155 /* Assets.xcassets */; };
 		B70F0D9D29357CB700F47155 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B70F0D9B29357CB700F47155 /* Main.storyboard */; };
+		B70F0DA729357D6500F47155 /* AuditCore in Frameworks */ = {isa = PBXBuildFile; productRef = B70F0DA629357D6500F47155 /* AuditCore */; };
+		B70F0DA92935951D00F47155 /* libEndpointSecurity.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B70F0DA8293594ED00F47155 /* libEndpointSecurity.tbd */; };
+		B70F0DAD2936236900F47155 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70F0DAC2936236900F47155 /* Array+Extensions.swift */; };
+		B70F0DAF2936293A00F47155 /* libbsm.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B70F0DAE2936292F00F47155 /* libbsm.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,11 @@
 		B70F0D9929357CB700F47155 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B70F0D9C29357CB700F47155 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B70F0D9E29357CB700F47155 /* FileAuditSystem.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FileAuditSystem.entitlements; sourceTree = "<group>"; };
+		B70F0DA429357D0C00F47155 /* AuditCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = AuditCore; sourceTree = "<group>"; };
+		B70F0DA8293594ED00F47155 /* libEndpointSecurity.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libEndpointSecurity.tbd; path = usr/lib/libEndpointSecurity.tbd; sourceTree = SDKROOT; };
+		B70F0DAA2935965500F47155 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B70F0DAC2936236900F47155 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
+		B70F0DAE2936292F00F47155 /* libbsm.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbsm.tbd; path = usr/lib/libbsm.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +36,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B70F0DAF2936293A00F47155 /* libbsm.tbd in Frameworks */,
+				B70F0DA729357D6500F47155 /* AuditCore in Frameworks */,
+				B70F0DA92935951D00F47155 /* libEndpointSecurity.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -36,8 +48,11 @@
 		B70F0D8929357CB200F47155 = {
 			isa = PBXGroup;
 			children = (
+				B70F0DAA2935965500F47155 /* README.md */,
+				B70F0DA429357D0C00F47155 /* AuditCore */,
 				B70F0D9429357CB200F47155 /* FileAuditSystem */,
 				B70F0D9329357CB200F47155 /* Products */,
+				B70F0DA529357D6500F47155 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,6 +67,7 @@
 		B70F0D9429357CB200F47155 /* FileAuditSystem */ = {
 			isa = PBXGroup;
 			children = (
+				B70F0DAB2936235700F47155 /* Extensions */,
 				B70F0D9529357CB200F47155 /* AppDelegate.swift */,
 				B70F0D9729357CB200F47155 /* ViewController.swift */,
 				B70F0D9929357CB700F47155 /* Assets.xcassets */,
@@ -59,6 +75,23 @@
 				B70F0D9E29357CB700F47155 /* FileAuditSystem.entitlements */,
 			);
 			path = FileAuditSystem;
+			sourceTree = "<group>";
+		};
+		B70F0DA529357D6500F47155 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B70F0DAE2936292F00F47155 /* libbsm.tbd */,
+				B70F0DA8293594ED00F47155 /* libEndpointSecurity.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B70F0DAB2936235700F47155 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B70F0DAC2936236900F47155 /* Array+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,6 +110,9 @@
 			dependencies = (
 			);
 			name = FileAuditSystem;
+			packageProductDependencies = (
+				B70F0DA629357D6500F47155 /* AuditCore */,
+			);
 			productName = FileAuditSystem;
 			productReference = B70F0D9229357CB200F47155 /* FileAuditSystem.app */;
 			productType = "com.apple.product-type.application";
@@ -132,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B70F0D9829357CB200F47155 /* ViewController.swift in Sources */,
+				B70F0DAD2936236900F47155 /* Array+Extensions.swift in Sources */,
 				B70F0D9629357CB200F47155 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -201,7 +238,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.4;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -256,7 +293,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.4;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -271,6 +308,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = FileAuditSystem/FileAuditSystem.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -287,6 +325,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ds9soft.FileAuditSystem;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -298,6 +337,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = FileAuditSystem/FileAuditSystem.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -314,6 +354,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ds9soft.FileAuditSystem;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -341,6 +382,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B70F0DA629357D6500F47155 /* AuditCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AuditCore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B70F0D8A29357CB200F47155 /* Project object */;
 }
