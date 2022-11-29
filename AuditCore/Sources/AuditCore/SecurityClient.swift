@@ -254,8 +254,6 @@ public final class SecurityClient {
             case .notifyWrite:
                 return String(cString: event.write.target.pointee.path.data)
         }
-        
-        return nil
     }
     
     // Split a file path into the parent folder and the file name.
