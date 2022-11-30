@@ -22,7 +22,7 @@ public struct AuditRecord {
     }
     
     public var csv: String {
-        return "\(fileName),\(timeStamp.description),\(user),\(processId.description),\(type.description)"
+        return "\(fileName),\(timeStamp.description),\(user),\(processId.description),\(type.description)\n"
     }
 
     // MARK: - Public Functions
